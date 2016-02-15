@@ -22,7 +22,7 @@ var Weather = React.createClass({
           if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
               var response = JSON.parse(xmlhttp.responseText);
-              var temp = Math.round((response.main.temp - 273.15)*1.8 + 32);
+              var temp = Math.round((response.main.temp - 273.15) * 1.8 + 32);
               var weather = response.weather[0].description;
               self.setState({ temperature: temp, weather: weather});
             } else {

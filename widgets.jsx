@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var Tabs = require('./tabs.jsx');
 var Clock = require('./clock.jsx');
 var Weather = require('./weather.jsx');
+var AutoComplete = require('./autocomplete.jsx');
 
 var tabs = [
   {title: "Home",
@@ -18,6 +19,16 @@ var tabs = [
   content: "even more stuff"}
 ];
 
+var names = [
+  "Joe",
+  "Scooby",
+  "Fred",
+  "Velma",
+  "Daphne",
+  "Shaggy",
+  "Scrappy"
+];
+
 var Widgets = React.createClass({
   render: function() {
     return (
@@ -25,6 +36,8 @@ var Widgets = React.createClass({
         Hello World
         <h1> Tabs! </h1>
         <Tabs tabs={tabs} />
+        <h1>Auto Complete</h1>
+        <AutoComplete names={names}/>
         <h1> Weather Clock </h1>
         <Clock />
         <Weather />
